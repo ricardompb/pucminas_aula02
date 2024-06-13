@@ -29,7 +29,16 @@ import { Op } from 'sequelize'
 //     return res.json(clientes)    
 // })
 
+
+// const sleep = timeout => new Promise(rersolve => {
+//     setTimeout(() => {
+//        rersolve()
+//     }, timeout)
+// })
+
 router.get('/', async (req, res) => {
+//    await sleep(5000)
+    
     const filter = {}
     if (req.query?.nome) {
         const { nome } = req.query
